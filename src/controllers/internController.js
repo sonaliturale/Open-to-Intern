@@ -89,5 +89,6 @@ const isValidRequestBody = function (requestBody) {
 
  }
 
+module.exports = { registerIntern }
 
- module.exports = { registerIntern }
+ 

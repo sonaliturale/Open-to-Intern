@@ -20,8 +20,8 @@ const registerCollege = async function(req, res) {
                 res.status(400).send({ status: false, message: 'Body cannot be empty, Please provide College details' })
                 return
             }
-            //Extract params
-            const { name, fullName, logoLink } = requestBody; //destructuring
+            
+            const { name, fullName, logoLink } = requestBody; 
 
             // Validation starts
             if (!isValid(name)) {
@@ -77,11 +77,11 @@ const collegeDetails = async function(req, res) {
         }
 
 
-        //console.log(collegedetail)
+        
         const ID = collegedetail._id
         console.log(ID)
         const interns = await internModel.find({ collegeId: ID, isDeleted: false }).select({ name: 1, email: 1, mobile: 1 })
-            //console.log(interns)
+        
         if (interns.length === 0) {
             let arr = {
                 name: collegedetail.name,

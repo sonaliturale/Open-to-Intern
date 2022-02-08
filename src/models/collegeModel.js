@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-
 const collegeSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -25,16 +24,7 @@ const collegeSchema = new mongoose.Schema({
         default: false
     },
 
-
-
-
 }, { timestamps: true })
-
-
-
-
-
-
 
 module.exports = mongoose.model('College', collegeSchema)
 
